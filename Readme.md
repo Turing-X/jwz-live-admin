@@ -1,29 +1,35 @@
-# JWZ Live
+# JWZ Live Admin
 
 ## Über dieses Projekt
 Am Freitag, den 24.02.2017 um 19:00 Uhr veranstaltet der Hyperion - Kulturverein e.V. einen Poetry Slam mit dem Titel “JEDES WORT ZÄHLT” im weißen Hirsch in Borgsdorf. Unser Ziel ist es einen Slam zu etablieren, der nicht nur durch Qualität, sondern auch durch Regelmäßigkeit überzeugt.
 
-Dieses Repository enthält den Code für die Votingapp.
+Dieses Repository enthält den Code für die Adminapp zum Steuern der Votingapp.
 
-Damit die App funktioniert wird außerdem die [Adminapp](https://github.com/Turing-X/jwz-live-admin) benötigt.
+Damit die App funktioniert wird außerdem die [normale Votingapp](https://github.com/Turing-X/jwz-live) benötigt.
 
 ## Wie man das Projekt zum Laufen bekommt
 ### Über die Kommandozeile (cmd oder Terminal)
+
+Die App nutzt die selbe Datenbank wie die Votingapp. Darüber sind die beiden Meteor-Anwendungen miteinander verbunden. Deshalb ist hier der Schritt, die Datenbank aus der anderen App zu verbinden, noch notwenig.
 ```
-$ git clone https://github.com/Turing-X/jwz-live.git
-$ cd jwz-live
+$ git clone https://github.com/Turing-X/jwz-live-admin.git
+$ cd jwz-live-admin
 $ meteor npm install
-$ meteor
+$ # In anderem Terminal die Votingapp starten
+$ export MONGO_URL=localhost:3001/meteor
+$ meteor --port 3003
 ```
 ### Über Github Desktop
 1. Plus-Button (+) klicken, 'Clone' auswählen
-2. Unter Turing-X nach jwz-live suchen, auswählen
-3. Auf 'Clone jwz-live' klicken, bestätigen
+2. Unter Turing-X nach jwz-live-admin suchen, auswählen
+3. Auf 'Clone jwz-live-admin' klicken, bestätigen
 4. Mit der Kommandozeile zum Ordner navigieren, dependencies installieren und Meteor starten:
 ```
-$ cd ./PFAD/ZU/jwz-live
+$ cd ./PFAD/ZU/jwz-live-admin
 $ meteor npm install
-$ meteor"
+$ # In anderem Terminal die Votingapp starten
+$ export MONGO_URL=localhost:3001/meteor
+$ meteor --port 3003
 ```
 
 ## Mitentwickeln
