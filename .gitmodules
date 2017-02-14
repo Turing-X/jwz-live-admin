@@ -1,0 +1,3 @@
+[submodule "packages/jwz-live-common"]
+	path = packages/jwz-live-common
+	url = git@github.com:Turing-X/jwz-live-common.git
