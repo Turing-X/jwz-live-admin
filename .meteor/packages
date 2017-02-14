@@ -19,3 +19,4 @@ reactive-var
 react-meteor-data
 static-html
 accounts-base
+jwz-common
