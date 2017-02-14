@@ -15,6 +15,7 @@ Die App nutzt die selbe Datenbank wie die Votingapp. Darüber sind die beiden Me
 $ git clone https://github.com/Turing-X/jwz-live-admin.git
 $ cd jwz-live-admin
 $ meteor npm install
+$ git submodule update --init --recursive
 $ # In anderem Terminal die Votingapp starten
 $ export MONGO_URL=localhost:3001/meteor
 $ meteor --port 3003
@@ -27,6 +28,7 @@ $ meteor --port 3003
 ```
 $ cd ./PFAD/ZU/jwz-live-admin
 $ meteor npm install
+$ git submodule update --init --recursive
 $ # In anderem Terminal die Votingapp starten
 $ export MONGO_URL=localhost:3001/meteor
 $ meteor --port 3003
